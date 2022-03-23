@@ -23,7 +23,8 @@ public class EmployeeService {
 	}
 	
 	public EmployeeDetails updateEmployee(EmployeeDetails employee,Integer id) {
-		EmployeeDetails emp=empRepo.findById(id).orElse(null);
+		EmployeeDetails emp=new EmployeeDetails();
+		emp=empRepo.findById(id).orElse(null);
 		emp.setName(employee.getName());
 		emp.setCity(employee.getCity());
 		
